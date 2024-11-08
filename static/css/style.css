@@ -1,0 +1,135 @@
+body {
+  font-family: 'Arial';
+  background-color: #f4f4f9;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  margin-right: 50px; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f4f4f9 !important;
+  background-color: #555;
+  border-radius: 15px;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+}
+
+.my-photo {
+  display: block;
+  margin: 20px auto;
+  width: 750px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin-bottom: 300px;
+}
+
+.my-photo:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  font-size: 3rem;
+}
+
+.phone-text:hover::after {
+  content: "+380995329221";
+  position: absolute;
+  background-color: #ffffff;
+  color: #000;
+  padding: 5px;
+  border-radius: 7px;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 50px;
+}
+
+.footer h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 10px 0;
+}
+
+.footer ul li a {
+  color: #f8f9fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #f39c12;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer .col-md-2 {
+  padding: 0 20px;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-label {
+  font-size: 20px;
+  display: inline-block;
+  width: 100px;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .footer .row {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer .col-md-2 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+}
