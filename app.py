@@ -57,34 +57,11 @@ def menu_page():
     return render_template("menu.html", **context)
 
 @app.get("/add_pizza/")
-def add_pizza():
-    if request.method == "POST":
-        name = request.form.get("name")
-        ingrediens = request.form.get("ingrediens")
-        price = request.form.get("price")
-
-        try:
-            sqlite_connection = sqlite3.connect("sql_pizza.db")
-            cursor = sqlite_connection.cursor()
-            insert_query = """INSERT INTO db_pizza 
-            (name, ingrediens, price) 
-            VALUES (?, ?, ?);"""
-            cursor.execute(insert_query, (name, ingrediens, int(price)))
-            sqlite_connection.commit()
-            print("Нова піца успішно додана")
-
-        except sqlite3.IntegrityError:
-            print("Помилка: піца з такою назвою або інгредієнтами вже існує.")
-        except sqlite3.Error as error:
-            print("Помилка при роботі з SQLite:", error)
-        finally:
-            if sqlite_connection:
-                sqlite_connection.close()
-
+def add_pizza_get():
     return render_template("add_pizza.html")
 
 @app.post("/add_pizza/")
-def add_pizza():
+def add_pizza_post():
     if request.method == "POST":
         name = request.form.get("name")
         ingrediens = request.form.get("ingrediens")
